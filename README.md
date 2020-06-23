@@ -111,7 +111,7 @@ call %%i:\Scripts\wininstall.cmd
 
 * The fourth command is a loop to check which drive letter is assigned to the location where the ininstall.cmd script is saved. 
 
-> Important: When you save the file, you should close all open file handles, for example, close File Explorer or navigate out of the Mount folder or the WinPE folder. Failing to close any open file handles will cause errors when unmounting the WinPE.
+> ***Important***: When you save the file, you should close all open file handles, for example, close File Explorer or navigate out of the Mount folder or the WinPE folder. Failing to close any open file handles will cause errors when unmounting the WinPE.
 
 8. Review WinPE details using DISM commands
 ````
@@ -133,7 +133,7 @@ dism /unmount-image /mountdir:"C:\Mount\WinPE" /commit
 
 11. Create the WinPE partition and data partition on the USB using Diskpart
 
-> Warning! Running these commands will erase all content on the USB device.
+> ***Warning!*** Running these commands will erase all content on the USB device.
 
 ````
 Diskpart
@@ -153,9 +153,9 @@ Assign Letter=F
 List Volume
 Exit
 ````
-> Important: in the 3rd command, enter the disk number for the USB device, in place of the [disk number] command placeholder. If you do not know the disk number, Diskpart can tell you by running `list disk` and noting the disk number.
+> ***Important***: in the 3rd command, enter the disk number for the USB device, in place of the [disk number] command placeholder. If you do not know the disk number, Diskpart can tell you by running `list disk` and noting the disk number.
 
-> Note: You can assign any available drive letters you wish and do not need to use E and F as shown. Also, you can set the label to anything if you want to assign different description labels.
+> ***Note***: You can assign any available drive letters you wish and do not need to use E and F as shown. Also, you can set the label to anything if you want to assign different description labels.
 
 12. Create bootable media for WinPE using makewinpemedia.cmd (this script comes built-in to the Windows ADK)
 
@@ -170,7 +170,7 @@ makewinpemedia /iso c:\WinPE\amd64 d:\amd64.iso
 ````
 makewinpemedia /ufd c:\WinPE\amd64 p:
 ````
-> Warning! Running this command will erase all content on the USB devices P partition.
+> ***Warning!*** Running this command will erase all content on the USB devices P partition.
 
 ## Next Steps - Deployment Resources
 1. Create a Scripts folder on the 2nd partition and name it Scripts
