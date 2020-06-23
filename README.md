@@ -160,7 +160,7 @@ Exit
 
 > ***Note***: You can assign any available drive letters you wish and do not need to use E and F as shown. Also, you can set the label to anything if you want to assign different description labels.
 
-### Create bootable media for WinPE using makewinpemedia.cmd (this script comes built-in to the Windows ADK)
+## Next Steps - Create bootable media for WinPE using makewinpemedia.cmd (this script comes built-in to the Windows ADK)
 Now that you have modified the custom WinPE, are ready to save it to bootable media. This can be in the form of an ISO or USB (the boot.wim file from the WinPE can also be loaded into WDS, but that is outside the scope of this guide)
 
 - To create an ISO (for use on a virtual machine). This example will create an ISO file named amd64.iso saved to the D drive
