@@ -6,7 +6,7 @@ The solution described in this guide will create a Windows 10 deployment device.
 
 Although this solution describes a USB device, it is fairly simple to modify this script for use with a network.
 
-The USB device will be created using the Windows ADK. It will contain two partitions; 
+The USB device will be created using the Windows ADK (Assessment and Deployment Kit). It will contain two partitions; 
 
 * FAT32 WinPE bootable partition
 * NTFS partition for the Windows 10 image and other resources, such as scripts
@@ -245,3 +245,5 @@ MD E:\Images\x64
 9. Power down the PC by holding the power button for 10 seconds or type `shutdown -t 0` at the command line
 
 10. Process the device by placing it into inventory or providing it to the end-user
+
+![Ready for inventory](https://github.com/HaroldMitts/wininstall/blob/master/img/Forklift-Boot.png)
