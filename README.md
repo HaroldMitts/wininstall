@@ -215,4 +215,12 @@ MD E:\Images\x64
 
 > Note: You should boot the device to OOBE in the factory so that you can perform a final qualitiy check and so that when the end-user next boots, the device will not need to go through plug and play detect again and it will boot faster. 
 
+7. From the first OOBE screen, press `Shift + F10` keys to open the command prompt
+
+8. Type `devmgmt.msc` to launch Device Manager. Inpect the device drivers and update drivers if needed, then close Device Manager.
+
 > Important: Do not create a user account - that is for the end-user to do. If you do, you will need to run Sysprep to prepare the installation for the end-user again.
+
+9. Power down the PC by holding the power button for 10 seconds or type `shutdown -t 0` at the command line
+
+10. Process the device by placing it into inventory or providing it to the end-user
