@@ -170,7 +170,9 @@ Exit
 ````
 > ***Important***: in the 3rd command, enter the disk number for the USB device, in place of the [disk number] command placeholder. If you do not know the disk number, Diskpart can tell you by running `list disk` and noting the disk number.
 
-> Example view of Disk Management showing the completed USB partitions ![Disk Manager view of USB](https://github.com/HaroldMitts/wininstall/blob/master/img/dismMgmt-usb.png)
+![Disk Manager view of USB](https://github.com/HaroldMitts/wininstall/blob/master/img/dismMgmt-usb.png)
+Example view of Disk Management showing the completed USB partitions
+
 > ***Note***: You can assign any available drive letters you wish and do not need to use E and F as shown. Also, you can set the label to anything if you want to assign different description labels.
 
 ## Next Steps - Create bootable media for WinPE using makewinpemedia.cmd (this script comes built-in to the Windows ADK)
