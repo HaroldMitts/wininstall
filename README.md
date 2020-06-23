@@ -163,7 +163,7 @@ Exit
 makewinpemedia /iso c:\WinPE\amd64 d:\amd64.iso
 ````
 
-To create a bootable USB
+    To create a bootable USB
 
 ````
 makewinpemedia /ufd c:\WinPE\amd64 p:
