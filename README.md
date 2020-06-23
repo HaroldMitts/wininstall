@@ -4,7 +4,10 @@ Command Script for installing Windows 10 from a single USB device
 ## Overview
 The solution described in this guide will create a Windows 10 deployment device. The solution describes a USB device, however, it is fairly simple to modify this script for use with a network.
 
-The USB device will be created using the Windows ADK. It will contain two partitions; a FAT32 WinPE bootable partition and an NTFS partition for the Windows 10 image and other resources, such as scripts.
+The USB device will be created using the Windows ADK. It will contain two partitions; 
+
+    * FAT32 WinPE bootable partition
+    * NTFS partition for the Windows 10 image and other resources, such as scripts
 
 ## Requirements
 * A USB device of 16GB or greater
