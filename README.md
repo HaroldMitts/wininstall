@@ -157,7 +157,7 @@ Exit
 
 12. Create bootable media for WinPE using makewinpemedia.cmd (this script comes built-in to the Windows ADK)
 
-- To create an ISO (for use on a virtual machine)
+- To create an ISO (for use on a virtual machine). This example will create an ISO file named amd64.iso saved to the D drive
 
 ````
 makewinpemedia /iso c:\WinPE\amd64 d:\amd64.iso
@@ -168,3 +168,4 @@ makewinpemedia /iso c:\WinPE\amd64 d:\amd64.iso
 ````
 makewinpemedia /ufd c:\WinPE\amd64 p:
 ````
+> Warning! Running this command will erase all content on the USB devices P partition.
