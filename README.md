@@ -11,7 +11,7 @@ The USB device will be created using the Windows ADK (Assessment and Deployment 
 * FAT32 WinPE bootable partition
 * NTFS partition for the Windows 10 image and other resources, such as scripts
 
-> ***Important***: FAT32 file system has a maximum file size of 4GB. Most Windows images are larger than 4GB and WinPE must reside on a FAT32 partition. Therefore, you will not be able to store Windows images in the WinPE partition and must store them in a separate NTFS partition, or on a network share and this is the reason we will create two partitions.
+> ***Important***: FAT32 file system has a maximum file size of 4GB. Most Windows images are larger than 4GB and WinPE must reside on a FAT32 partition. Therefore, you will not be able to store Windows images in the WinPE partition and must store them in a separate NTFS partition, or on a network share and this is the reason we will create two partitions. Some types of USB keys will not support multiple partitions, if you encounter this issue, you will need to try a different device (external USB hard drives will always support multiple partitions).
 
 ## Requirements
 * A USB device of 16GB or greater
