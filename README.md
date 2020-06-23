@@ -111,12 +111,58 @@ call %%i:\Scripts\wininstall.cmd
 
 * The fourth command is a loop to check which drive letter is assigned to the location where the ininstall.cmd script is saved. 
 
-
+8. Review WinPE details using DISM commands
+````
 dism /get-mountedimageinfo
+````
+````
 dism /image:"c:\Mount\WinPE" /get-pesettings
+````
+````
 dism /image:"c:\Mount\WinPE" /get-packages
+````
 
+9. Unmount and Commit changes to WinPE, using DISM
+````
 dism /unmount-image /mountdir:"C:\Mount\WinPE" /commit
+````
 
+10. Connect the USB device to the Technician PC
+
+11. Create the WinPE partition and data partition on the USB using Diskpart
+
+> Warning! Running these commands will erase all content on the USB device.
+
+````
+Diskpart
+List Disk
+Select [disk number]
+Clean
+Create Partition Primary 
+Size=2000
+Format Quick fs=fat32 
+Label="Windows PE"
+Assign Letter=E
+Active
+Create Partition Primary
+Format fs=ntfs Quick 
+Label="Data"
+Assign Letter=F
+List Volume
+Exit
+````
+> Important: in the 3rd command, enter the disk number for the USB device, in place of the [disk number] command placeholder. If you do not know the disk number, Diskpart can tell you by running `list disk` and noting the disk number.
+
+> Note: You can assign any available drive letters you wish and do not need to use E and F as shown. Also, you can set the label to anything if you want to assign different description labels.
+
+12. Create bootable media for WinPE using makewinpemedia.cmd (this script comes built-in to the Windows ADK)
+
+    * To create an ISO (for use on a virtual machine)
+````
 makewinpemedia /iso c:\WinPE\amd64 d:\amd64.iso
+````
+
+    * To create a bootable USB
+````
 makewinpemedia /ufd c:\WinPE\amd64 p:
+````
