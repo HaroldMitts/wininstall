@@ -62,7 +62,7 @@ dism /image:"c:\mount\winpe" /add-package /packagepath:"c:\Program Files (x86)\W
 
 dism /image:"c:\mount\winpe" /add-package /packagepath:"c:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-WMI_en-us.cab"
 ````
-Dot Net Framework and its English language component
+DotNet Framework and its English language component
 ````
 dism /image:"c:\mount\winpe" /add-package /packagepath:"c:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-NetFx.cab"
 
@@ -110,6 +110,8 @@ call %%i:\Scripts\wininstall.cmd
 * The third command sets the WinPE power scheme to high performance mode. This is optional, but will help load Windows faster.
 
 * The fourth command is a loop to check which drive letter is assigned to the location where the ininstall.cmd script is saved. 
+
+> Important: When you save the file, you should close all open file handles, for example, close File Explorer or navigate out of the Mount folder or the WinPE folder. Failing to close any open file handles will cause errors when unmounting the WinPE.
 
 8. Review WinPE details using DISM commands
 ````
@@ -169,3 +171,48 @@ makewinpemedia /iso c:\WinPE\amd64 d:\amd64.iso
 makewinpemedia /ufd c:\WinPE\amd64 p:
 ````
 > Warning! Running this command will erase all content on the USB devices P partition.
+
+## Next Steps - Deployment Resources
+1. Create a Scripts folder on the 2nd partition and name it Scripts
+
+````
+MD E:\Scripts
+````
+
+2. Create an Images folder on the 2nd partition and name it Images. You may want to create a folder for both 32-bit and 64-bit
+
+````
+MD E:\Images\x86
+MD E:\Images\x64
+````
+
+3. Copy the following scripts to the Scripts folder, for example to the E:\Scripts folder
+
+* ApplyImage.bat
+* CreatePartitions-BIOS.txt
+* CreatePartitions-UEFI.txt
+* HideRecoveryPartitions-BIOS.txt
+* HideRecoveryPartitions-UEFI.txt
+* Walkthrough-Deploy.bat
+* Wininstall.cmd
+
+4. Copy a Windows 10 image to the Images folder, for example to the E:\Images\x64 folder
+
+> Note: wininstall.cmd is coded to look for files named pro.wim and home.wim. If you wish to name them something else, you will need to modify wininstall.cmd appropriately.
+
+## Next Steps - Perform an Installation of Windows 10
+1. Boot a Reference PC (or virtual PC) to the WinPE created in the steps above
+
+2. WinPE should initialize and locate the partition where the wininstall.cmd file is located
+
+3. Wininstall.cmd should launch and prompt to install either Windows 10 Home or Windows 10 Pro
+
+4. Make the OS version selection and press Enter
+
+5. When Windows installation completes, you can press and hold the power button to power down the PC or type `exit` to reboot
+
+6. On next boot, the device will boot to the Windows Out of Box Experience (OOBE)
+
+> Note: You should boot the device to OOBE in the factory so that you can perform a final qualitiy check and so that when the end-user next boots, the device will not need to go through plug and play detect again and it will boot faster. 
+
+> Important: Do not create a user account - that is for the end-user to do. If you do, you will need to run Sysprep to prepare the installation for the end-user again.
