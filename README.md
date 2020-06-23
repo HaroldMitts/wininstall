@@ -246,4 +246,4 @@ MD E:\Images\x64
 
 10. Process the device by placing it into inventory or providing it to the end-user
 
-![Ready for inventory](https://github.com/HaroldMitts/wininstall/blob/master/img/Forklift-Boot.png)
+![Ready for inventory](https://github.com/HaroldMitts/wininstall/blob/master/img/Forklift.png)
