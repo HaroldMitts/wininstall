@@ -2,12 +2,16 @@
 Command Script for installing Windows 10 from a single USB device
 
 ## Overview
-The solution described in this guide will create a Windows 10 deployment device. The solution describes a USB device, however, it is fairly simple to modify this script for use with a network.
+The solution described in this guide will create a Windows 10 deployment device. Windows deployment can be accomplished using a single USB, as described in this guide. Often USB deployment solutions describe using two USB devices; USB-A for the bootable WinPE and USB-B for the data volume containing the Windows image and additional resources. This guide will show how you can build a single USB for use when deploying Windows to PCs with just one USB port, or if you just want to do this using a single USB.
+
+Although this solution describes a USB device, it is fairly simple to modify this script for use with a network.
 
 The USB device will be created using the Windows ADK. It will contain two partitions; 
 
 * FAT32 WinPE bootable partition
 * NTFS partition for the Windows 10 image and other resources, such as scripts
+
+> ***Important***: FAT32 file system has a maximum file size of 4GB. Most Windows images are larger than 4GB and WinPE must reside on a FAT32 partition. Therefore, you will not be able to store Windows images in the WinPE partition and must store them in a separate NTFS partition, or on a network share and this is the reason we will create two partitions.
 
 ## Requirements
 * A USB device of 16GB or greater
@@ -134,7 +138,15 @@ dism /unmount-image /mountdir:"C:\Mount\WinPE" /commit
 
 10. Connect the USB device to the Technician PC
 
-11. Create the WinPE partition and data partition on the USB using Diskpart
+11. Determine the disk number for the USB device, using Diskpart
+
+````
+Diskpart
+List Disk
+Exit
+````
+
+12. Create the WinPE partition and data partition on the USB using Diskpart
 
 > ***Warning!*** Running these commands will erase all content on the USB device.
 
