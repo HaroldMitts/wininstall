@@ -49,6 +49,7 @@ dism /mount-image /imagefile:"c:\WinPE\amd64\media\sources\boot.wim" /index:1 /m
     * PowerShell
     * DISM Commandlets
 
+#### From the Deployment and Imaging Tools Environment (WinPE CLI), add the WinPE OCs
 Scripting OC and its English language component
 ````
 dism /image:"c:\mount\winpe" /add-package /packagepath:"c:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-Scripting_en-us.cab"
