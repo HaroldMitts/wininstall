@@ -42,12 +42,12 @@ dism /mount-image /imagefile:"c:\WinPE\amd64\media\sources\boot.wim" /index:1 /m
 
 5. Extend the capabilities of the WinPE by adding WinPE Optional Components (OCs) using DISM. In this example, the following OCs are added
 
-* Scripting
-* WMI
-* .Net Framework
-* HTA
-* PowerShell
-* DISM Commandlets
+    * Scripting
+    * WMI
+    * .Net Framework
+    * HTA
+    * PowerShell
+    * DISM Commandlets
 
 Scripting OC and its English language component
 ````
