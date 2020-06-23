@@ -160,7 +160,7 @@ Assign Letter=E
 Active
 Create Partition Primary
 Format fs=ntfs Quick 
-Label="Data"
+Label="USB-B"
 Assign Letter=F
 List Volume
 Exit
