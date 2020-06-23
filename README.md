@@ -167,7 +167,7 @@ Exit
 ````
 > ***Important***: in the 3rd command, enter the disk number for the USB device, in place of the [disk number] command placeholder. If you do not know the disk number, Diskpart can tell you by running `list disk` and noting the disk number.
 
-![Disk Manager view of USB](https://github.com/HaroldMitts/wininstall/blob/master/img/dismMgmt-usb.png)
+![Disk Manager view of USB](https://github.com/HaroldMitts/wininstall/blob/master/img/USB-diskMgmt.png)
 
 Example view of Disk Management showing the completed USB partitions
 
