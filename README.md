@@ -223,6 +223,8 @@ MD E:\Images\x64
 > ***Note***: wininstall.cmd is coded to look for files named pro.wim and home.wim. If you wish to name them something else, you will need to modify wininstall.cmd appropriately.
 
 ## Next Steps - Perform an Installation of Windows 10
+![Install Windows 10 using USB](https://github.com/HaroldMitts/wininstall/blob/master/img/USB-Boot.png)
+
 1. Boot a Reference PC (or virtual PC) to the WinPE created in the steps above
 
 2. WinPE should initialize and locate the partition where the wininstall.cmd file is located
