@@ -86,7 +86,28 @@ DISM Commandlets and its English language component
 
         dism /image:"c:\Mount\WinPE" /add-package /packagepath:"c:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-DismCmdlets_en-us.cab"
 ````
-notepad c:\Mount\PE2\Windows\System32\startnet.cmd
+
+6. Open the Startnet.cmd file using Notepad
+````
+        notepad c:\Mount\PE2\Windows\System32\startnet.cmd
+````
+7. Add a Call to the wininstall.cmd script. We will save winistall.cmd to the 2nd partition or a network path and is discussed later in this guide.
+````
+winpeinit
+powercfg /s 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
+FOR %%i IN (C D E F G H I J K L N M O P Q R S T U V W X Y Z) DO (
+    IF EXIST %%i:\scripts\wininstall.cmd (
+        SET usbbroot=%%i
+    )
+)
+call %%i:\Scripts\wininstall.cmd
+````
+* The first command initializes WinPE and should already exist in the Startnet.cmd
+
+* The second command sets the WinPE power scheme to high performance mode. This is optional, but will help load Windows faster
+
+* The third command is a loop to check which drive letter is assigned to the location where the ininstall.cmd script is saved. 
+
 
 dism /get-mountedimageinfo
 dism /image:"c:\Mount\WinPE" /get-pesettings
