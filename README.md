@@ -6,8 +6,8 @@ The solution described in this guide will create a Windows 10 deployment device.
 
 The USB device will be created using the Windows ADK. It will contain two partitions; 
 
-*   FAT32 WinPE bootable partition
-*   NTFS partition for the Windows 10 image and other resources, such as scripts
+* FAT32 WinPE bootable partition
+* NTFS partition for the Windows 10 image and other resources, such as scripts
 
 ## Requirements
 * A USB device of 16GB or greater
