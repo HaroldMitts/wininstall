@@ -198,7 +198,7 @@ MD E:\Images\x64
 
 4. Copy a Windows 10 image to the Images folder, for example to the E:\Images\x64 folder
 
-> Note: wininstall.cmd is coded to look for files named pro.wim and home.wim. If you wish to name them something else, you will need to modify wininstall.cmd appropriately.
+> ***Note***: wininstall.cmd is coded to look for files named pro.wim and home.wim. If you wish to name them something else, you will need to modify wininstall.cmd appropriately.
 
 ## Next Steps - Perform an Installation of Windows 10
 1. Boot a Reference PC (or virtual PC) to the WinPE created in the steps above
@@ -213,13 +213,13 @@ MD E:\Images\x64
 
 6. On next boot, the device will boot to the Windows Out of Box Experience (OOBE)
 
-> Note: You should boot the device to OOBE in the factory so that you can perform a final qualitiy check and so that when the end-user next boots, the device will not need to go through plug and play detect again and it will boot faster. 
+> ***Note***: You should boot the device to OOBE in the factory so that you can perform a final qualitiy check and so that when the end-user next boots, the device will not need to go through plug and play detect again and it will boot faster. 
 
 7. From the first OOBE screen, press `Shift + F10` keys to open the command prompt
 
 8. Type `devmgmt.msc` to launch Device Manager. Inpect the device drivers and update drivers if needed, then close Device Manager.
 
-> Important: Do not create a user account - that is for the end-user to do. If you do, you will need to run Sysprep to prepare the installation for the end-user again.
+> ***Important***: Do not create a user account - that is for the end-user to do. If you do, you will need to run Sysprep to prepare the installation for the end-user again.
 
 9. Power down the PC by holding the power button for 10 seconds or type `shutdown -t 0` at the command line
 
