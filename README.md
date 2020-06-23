@@ -28,7 +28,7 @@ In this guide, I use 64-bit, but all commands are similar for 32-bit, except you
 copype x86 c:\WinPE\x86
 ````
 
-3. Mount the new WinPE, using [DISM][1]
+3. Mount the new WinPE, using [DISM][1]. 
 [1]: https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/dism---deployment-image-servicing-and-management-technical-reference-for-windows "Deployment Image Servicing and Management documentation at Microsoft.com" 
 
 ````
