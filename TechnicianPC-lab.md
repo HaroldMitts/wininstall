@@ -4,5 +4,5 @@
 
 | Resource | Requirements |  
 |-----------|:-----------|  
-| Technician PC | * Windows 10 installed <br>* Windows ADK installed<br>* Windows 10 OPKs<br>* Device Drivers for the reference PC saved in INF format<br>* Sample answer files from USB-B<br>* Deployment scripts from USB-B<br>* Windows servicing scripts<br>* Minimum of 60 GB free disk space |  
+| Technician PC | Windows 10 installed <br>Windows ADK installed<br>Windows 10 OPKs<br>Device Drivers for the reference PC saved in INF format<br>Sample answer files from USB-B<br>Deployment scripts from USB-B<br>Windows servicing scripts<br>Minimum of 60 GB free disk space |  
 | Cell B1 | Cell B2 |
