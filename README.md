@@ -226,7 +226,7 @@ MD E:\Images\x86
 MD E:\Images\x64
 ````
 
-3. Copy the following scripts to the Scripts folder, for example to the E:\Scripts folder
+3. Copy the following files to the Scripts folder, for example to the E:\Scripts folder
 
 * ApplyImage.bat
 * CreatePartitions-BIOS.txt
