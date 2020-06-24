@@ -264,7 +264,7 @@ MD E:\Images\x64
 
 > ***Important***: Do not create a user account - that is for the end-user to do. If you do, you will need to run Sysprep to prepare the installation for the end-user again.
 
-9. Power down the PC by holding the power button for 10 seconds or type `shutdown -t 0` at the command line
+9. Power down the PC by holding the power button for 10 seconds or type `shutdown -s -t 0` at the command line
 
 10. Process the device by placing it into inventory or providing it to the end-user
 
