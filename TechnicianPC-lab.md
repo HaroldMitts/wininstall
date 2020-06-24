@@ -1,6 +1,6 @@
 # Technician Computer and Build Lab
 
-> Building and maintaining a test lab will enable you to more rapidly build and deploy Windows without risk or burden to your production environment. <br> 
+> Building and maintaining a test lab will enable you to more rapidly build and deploy Windows without risk or burden to your production environment. <br><br> 
 > The technician PC and lab should consist of the following;
 
 ## Technician PC 
