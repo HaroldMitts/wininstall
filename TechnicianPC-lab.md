@@ -2,7 +2,7 @@
 
 Building and maintaining a test lab will enable you to more rapidly build and deploy without risk or burden to your production environment. The technician PC and lab should consist of the following;
 
-#### Technician PC 
+## Technician PC 
 * Windows 10 installed
 * Windows ADK installed
 * Windows 10 OPKs
@@ -12,15 +12,15 @@ Building and maintaining a test lab will enable you to more rapidly build and de
 * Windows servicing scripts
 * Minimum of 60 GB free disk space
 
-#### Reference PC
+## Reference PC
 * A common model of PC
 * Virtual PC
 
-#### Target PC
+## Target PC
 * Compatible with Windows 10
 * Laptop, Desktop, or Tablet
 
-#### Additional Hardware
+## Additional Hardware
 
 * USB flash drives
     * USB-A 
