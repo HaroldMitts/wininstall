@@ -5,4 +5,42 @@
 | Resource | Requirements |  
 |-----------|:-----------|  
 | Technician PC | Windows 10 installed <br>Windows ADK installed<br>Windows 10 OPKs<br>Device Drivers for the reference PC saved in INF format<br>Sample answer files from USB-B<br>Deployment scripts from USB-B<br>Windows servicing scripts<br>Minimum of 60 GB free disk space |  
-| Cell B1 | Cell B2 |
+| Reference PC | A common model of PC<br>Virtual PC B2 |
+| Target PC | Compatible with Windows 10<br>Laptop, Desktop, or Tablet |  
+| Additional Hardware | <ul><li>USB flash drives</li><li>USB-A</li></ul>
+
+FAT32
+
+4GB minimum
+
+USB-B
+
+NTFS
+
+16 GB minimum for x86
+
+32 GB minimum for amd64
+
+USB hard drive (Optional)
+
+2 partitions
+
+2 GB FAT32 for WinPE
+
+NTFS for Windows and additional resources
+
+Network (Optional)
+
+Windows Server OS
+
+TCP/IP
+
+DNS
+
+PXE
+
+WDS
+
+Ethernet cables
+
+Power
