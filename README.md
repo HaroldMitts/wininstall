@@ -139,7 +139,7 @@ dism /image:"c:\Mount\WinPE" /get-pesettings
 dism /image:"c:\Mount\WinPE" /get-packages
 ````
 
-## Next Steps = Unmount and Commit changes to WinPE, using DISM
+## Next Steps - Unmount and Commit changes to WinPE, using DISM
 
 > Save the changes you have made to WinPE
 
