@@ -7,7 +7,7 @@
 | Technician PC | Windows 10 installed <br>Windows ADK installed<br>Windows 10 OPKs<br>Device Drivers for the reference PC saved in INF format<br>Sample answer files from USB-B<br>Deployment scripts from USB-B<br>Windows servicing scripts<br>Minimum of 60 GB free disk space |  
 | Reference PC | A common model of PC<br>Virtual PC B2 |
 | Target PC | Compatible with Windows 10<br>Laptop, Desktop, or Tablet |  
-| Additional Hardware | <ul><li>USB flash drives</li><li>USB-A</li></ul>
+| Additional Hardware | USB flash drives<ul><li>USB-A</li><li>FAT32</li><li>4GB minimum</li>USB-B<li>16GB minimum for 32-bit</li><li>32GB minimum for 64-bit</li></ul>
 
 FAT32
 
