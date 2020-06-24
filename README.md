@@ -47,16 +47,18 @@ MD C:\Mount\WinPE
 dism /mount-image /imagefile:"c:\WinPE\amd64\media\sources\boot.wim" /index:1 /mountdir:"C:\Mount\WinPE"
 ````
 
-5. Extend the capabilities of the WinPE by adding WinPE Optional Components (OCs) using DISM. In this example, the following OCs are added
+#### Extend the capabilities of the WinPE by adding WinPE Optional Components (OCs) using DISM
 
-    * Scripting
-    * WMI
-    * .Net Framework
-    * HTA
-    * PowerShell
-    * DISM Commandlets
+> In this example, the following OCs are added
+>
+>    * Scripting
+>    * WMI
+>    * .Net Framework
+>    * HTA
+>    * PowerShell
+>    * DISM Commandlets
 
-#### From the Deployment and Imaging Tools Environment (WinPE CLI), add the WinPE OCs
+From the Deployment and Imaging Tools Environment (WinPE CLI), add the WinPE OCs
 Scripting OC and its English language component
 ````
 dism /image:"c:\mount\winpe" /add-package /packagepath:"c:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-Scripting_en-us.cab"
@@ -114,6 +116,8 @@ call %%i:\Scripts\wininstall.cmd
 * The second command turns off the verbose echoing of every command. This is optional, but makes usage cleaner.
 
 * The third command is a loop to check which drive letter is assigned to the location where the ininstall.cmd script is saved. 
+
+* The fourth command invokes the wininstall.cmd script from the drive letter discovered by the loop.
 
 > ***Important***: When you save the file, you should close all open file handles, for example, close File Explorer or navigate out of the Mount folder or the WinPE folder. Failing to close any open file handles will cause errors when unmounting the WinPE.
 
