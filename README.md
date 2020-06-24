@@ -21,6 +21,8 @@ The USB device will be created using the Windows ADK (Assessment and Deployment 
 * A Target PC (or virtual machine)
 * A Windows 10 image in .wim format 
 
+> See this page for more details about Technician PC requirements https://github.com/HaroldMitts/wininstall/blob/master/TechnicianPC-lab 
+
 ## Getting Started
 1. Install the Windows ADK on your Technician PC. If you do not already have the latest Windows ADK installed (including the Windows PE add-on), you can download it from Microsoft at this link: https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install 
 2. Create a new Windows PE (WinPE) using the Windows ADK. The following command will create a 64-bit custom WinPE located at c:\WinPE\amd64 and the WinPE will be named amd64
