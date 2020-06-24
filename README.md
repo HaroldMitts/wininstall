@@ -47,7 +47,7 @@ MD C:\Mount\WinPE
 dism /mount-image /imagefile:"c:\WinPE\amd64\media\sources\boot.wim" /index:1 /mountdir:"C:\Mount\WinPE"
 ````
 
-#### Extend the capabilities of the WinPE by adding WinPE Optional Components (OCs) using DISM
+### Extend the capabilities of the WinPE by adding WinPE Optional Components (OCs) using DISM
 
 > In this example, the following OCs are added via the Deployment and Imaging Tools Environment (WinPE CLI)
 >
@@ -95,7 +95,7 @@ dism /image:"c:\Mount\WinPE" /add-package /packagepath:"c:\Program Files (x86)\W
 dism /image:"c:\Mount\WinPE" /add-package /packagepath:"c:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-DismCmdlets_en-us.cab"
 ````
 
-#### Modify the Startnet.cmd of the WinPE
+### Modify the Startnet.cmd of the WinPE
 
 6. Open the Startnet.cmd file using Notepad
 ````
