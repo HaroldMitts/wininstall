@@ -1,10 +1,12 @@
 # Technician Computer and Build Lab
 
+````
 Building and maintaining a test lab will enable you to more rapidly build and deploy Windows without risk or burden to your production environment. 
 
-````
 The technician PC and lab should consist of the following;
 ````
+
+> Example blockquote text
 
 ## Technician PC 
 * Windows 10 installed
