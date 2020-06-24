@@ -13,6 +13,7 @@
 <dl>
     <dt>USB hard drive (Optional)</dt>
     <dd>2 partitions - 2 GB FAT32 for WinPE, NTFS for Windows and additional resources</dd>
+</dl>
 
 2 GB FAT32 for WinPE
 
