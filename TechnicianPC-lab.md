@@ -38,8 +38,10 @@
 * Network (Optional)
     * Windows Server OS
     * TCP/IP
+    * DHCP
     * DNS
     * PXE
     * WDS
-    * Ethernet cables
-    * Power
+    * Layer 1 or 2 Switch
+    * Ethernet cables (Cat 5e or better)
+    * Power Supply
