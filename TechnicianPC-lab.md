@@ -9,6 +9,17 @@
 | Target PC | Compatible with Windows 10<br>Laptop, Desktop, or Tablet |  
 | Additional Hardware | USB flash drives<ul><li>USB-A</li><li>FAT32</li><li>4GB minimum</li></ul>USB-B<ul><li>16GB minimum for 32-bit</li><li>32GB minimum for 64-bit</li></ul>USB hard drive (Optional)<ul><li>2 partitions</li>
 
+<ul>
+  <li>Coffee</li>
+  <li>Tea
+    <ul>
+      <li>Black tea</li>
+      <li>Green tea</li>
+    </ul>
+  </li>
+  <li>Milk</li>
+</ul> |  
+
 
 <dl>
     <dt>USB hard drive (Optional)</dt>
@@ -34,3 +45,4 @@ WDS
 Ethernet cables
 
 Power
+
