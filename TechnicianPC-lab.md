@@ -21,8 +21,6 @@ Building and maintaining a test lab will enable you to more rapidly build and de
 * Laptop, Desktop, or Tablet
 
 #### Additional Hardware
-* USB flash drives<ul><li>USB-A</li><ul><li>FAT32</li><li>4GB minimum</li></ul><ul>USB-B<li>16GB minimum for 32-bit</li><li>32GB minimum for 64-bit</li></ul><ul>USB hard drive (Optional)<li>2 partitions</li><ul><li>2 GB FAT32 for WinPE</li><li>NTFS for Windows and additional resources</li></ul>
-
 
 * USB flash drives
     * USB-A 
