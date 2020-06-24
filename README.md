@@ -49,7 +49,7 @@ dism /mount-image /imagefile:"c:\WinPE\amd64\media\sources\boot.wim" /index:1 /m
 
 ### Extend the capabilities of the WinPE by adding WinPE Optional Components (OCs) using DISM
 
-> In this example, the following OCs are added via the Deployment and Imaging Tools Environment (WinPE CLI)
+> In this example, the following OCs are added;
 >
 >    * Scripting
 >    * WMI
@@ -122,7 +122,10 @@ call %%i:\Scripts\wininstall.cmd
 
 > ***Important***: When you save the file, you should close all open file handles, for example, close File Explorer or navigate out of the Mount folder or the WinPE folder. Failing to close any open file handles will cause errors when unmounting the WinPE.
 
-8. Review WinPE details using DISM commands
+## Next Steps - Review WinPE details using DISM commands
+
+> Optional: You can verify if WinPE has been successfully modified by running the following commands and examining the output
+
 ````
 dism /get-mountedimageinfo
 ````
@@ -133,14 +136,25 @@ dism /image:"c:\Mount\WinPE" /get-pesettings
 dism /image:"c:\Mount\WinPE" /get-packages
 ````
 
-9. Unmount and Commit changes to WinPE, using DISM
+## Next Steps = Unmount and Commit changes to WinPE, using DISM
+
+> Save the changes you have made to WinPE
+
 ````
 dism /unmount-image /mountdir:"C:\Mount\WinPE" /commit
 ````
 
-10. Connect the USB device to the Technician PC
+> ***Note***: If you do not want to save the changes you have made, use the /discard option, for example
 
-11. Determine the disk number for the USB device, using Diskpart
+````
+dism /unmount-image /mountdir:"C:\Mount\WinPE" /discard
+````
+
+## Next Steps - Create Bootable Media from the Custom WinPE
+
+1. Connect the USB device to the Technician PC
+
+2. Determine the disk number for the USB device, using Diskpart
 
 ````
 Diskpart
@@ -148,7 +162,7 @@ List Disk
 Exit
 ````
 
-12. Create the FAT32 WinPE partition and NTFS data partition on the USB using Diskpart
+3. Create the FAT32 WinPE partition and NTFS data partition on the USB using Diskpart
 
 > ***Warning!*** Running these commands will erase all content on the USB device.
 
