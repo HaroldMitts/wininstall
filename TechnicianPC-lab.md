@@ -20,43 +20,27 @@ Building and maintaining a test lab will enable you to more rapidly build and de
 * Compatible with Windows 10
 * Laptop, Desktop, or Tablet
 
-* #### Additional Hardware
+#### Additional Hardware
 * USB flash drives<ul><li>USB-A</li><ul><li>FAT32</li><li>4GB minimum</li></ul><ul>USB-B<li>16GB minimum for 32-bit</li><li>32GB minimum for 64-bit</li></ul><ul>USB hard drive (Optional)<li>2 partitions</li><ul><li>2 GB FAT32 for WinPE</li><li>NTFS for Windows and additional resources</li></ul>
 
-<ul>
-  <li>Coffee</li>
-  <li>Tea
-    <ul>
-      <li>Black tea</li>
-      <li>Green tea</li>
-    </ul>
-  </li>
-  <li>Milk</li>
-</ul> |  
 
-
-<dl>
-    <dt>USB hard drive (Optional)</dt>
-    <dd>2 partitions - 2 GB FAT32 for WinPE, NTFS for Windows and additional resources</dd>
-</dl>
-
-
-
-
-
-Network (Optional)
-
-Windows Server OS
-
-TCP/IP
-
-DNS
-
-PXE
-
-WDS
-
-Ethernet cables
-
-Power
-
+* USB flash drives
+    * USB-A 
+        * FAT32
+        * 4GB minimum
+    * USB-B
+        * NTFS
+        * 16 GB minimum for x86
+        * 32 GB minimum for amd64
+    * USB hard drive (Optional)
+        * 2 partitions
+        * 2 GB FAT32 for WinPE
+        * NTFS for Windows and additional resources
+* Network (Optional)
+    * Windows Server OS
+    * TCP/IP
+    * DNS
+    * PXE
+    * WDS
+    * Ethernet cables
+    * Power
