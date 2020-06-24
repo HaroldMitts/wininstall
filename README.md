@@ -97,11 +97,14 @@ dism /image:"c:\Mount\WinPE" /add-package /packagepath:"c:\Program Files (x86)\W
 
 ### Modify the Startnet.cmd of the WinPE
 
-6. Open the Startnet.cmd file using Notepad
+Open the Startnet.cmd file using Notepad
+
 ````
 notepad c:\Mount\PE2\Windows\System32\startnet.cmd
 ````
-7. Add a Call to the wininstall.cmd script. We will save winistall.cmd to the 2nd partition or a network path and is discussed later in this guide.
+
+Add a Call to the wininstall.cmd script. We will save winistall.cmd to the 2nd partition or a network path and is discussed later in this guide.
+
 ````
 winpeinit
 @ECHO OFF
