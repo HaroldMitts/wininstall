@@ -103,7 +103,7 @@ Open the Startnet.cmd file using Notepad
 notepad c:\Mount\PE2\Windows\System32\startnet.cmd
 ````
 
-Add a Call to the wininstall.cmd script. We will save winistall.cmd to the 2nd partition or a network path and is discussed later in this guide.
+Add a Call to the wininstall.cmd script - We will save winistall.cmd to the 2nd partition or a network path as discussed later in this guide.
 
 ````
 winpeinit
