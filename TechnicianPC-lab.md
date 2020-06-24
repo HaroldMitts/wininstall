@@ -1,14 +1,19 @@
 # Technician Computer and Build Lab
 
-Building and maintaining a test lab will enable you to more rapidly build and deploy without risk or burden to your production environment. The technician PC and lab should consist of the following;
+Building and maintaining a test lab will enable you to more rapidly build and deploy Windows without risk or burden to your production environment. 
+
+````
+The technician PC and lab should consist of the following;
+````
 
 ## Technician PC 
 * Windows 10 installed
 * Windows ADK installed
 * Windows 10 OPKs
+* Office OPK
 * Device Drivers for the reference PC saved in INF format
-* Sample answer files from USB-B
-* Deployment scripts from USB-B
+* Answer files 
+* Deployment scripts
 * Windows servicing scripts
 * Minimum of 60 GB free disk space
 
