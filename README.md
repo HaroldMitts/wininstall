@@ -269,3 +269,16 @@ MD E:\Images\x64
 10. Process the device by placing it into inventory or providing it to the end-user
 
 ![Ready for inventory](https://github.com/HaroldMitts/wininstall/blob/master/img/Forklift.png)
+
+# Additional Related Resources
+Desktop manufacturing
+https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/
+
+USB-B direct download
+https://download.microsoft.com/download/5/8/4/5844EE21-4EF5-45B7-8D36-31619017B76A/USB-B.zip
+
+Windows 10 DISM Command-Line Options
+https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options 
+
+Windows Commands
+https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands 
