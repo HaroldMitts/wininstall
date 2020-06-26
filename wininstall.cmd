@@ -1,10 +1,13 @@
 @ECHO off
 powercfg /s 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
-Start /min cmd.exe /T:8E
 GOTO Begin
 :version
-Custom Startnet.cmd file                By: Harold Mitts
-Version 1.7                             June 25, 2020
+Wininstall.cmd
+https://github.com/HaroldMitts/wininstall
+USB Version
+By: Harold Mitts
+Version 1.7
+June 25, 2020
 
 :Begin
 FOR %%i IN (C D E F G H I J K L N M O P Q R S T U V W X Y Z) DO (
