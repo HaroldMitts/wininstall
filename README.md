@@ -23,7 +23,7 @@ The USB device will be created using the Windows ADK (Assessment and Deployment 
 
 > See [this page](https://github.com/HaroldMitts/wininstall/blob/master/TechnicianPC-lab.md "Build a Technician PC and Lab Environment") for more details about Technician PC requirements 
 
-> ***Note***: Walkthrough-deploy.bat, ApplyImage.bat, CreatePartitions.txt, and HideRecoveryPartitons.txt files are created by Microsoft Corporation and the versions present in this guide have been modified to add additional automation. You can easily use the Microsoft versions, rather then these altered versions, by visiting the Microsoft site and downloading them. Here is the [link](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/)
+> ***Note***: Walkthrough-deploy.bat, ApplyImage.bat, CreatePartitions.txt, and HideRecoveryPartitons.txt files are created by Microsoft Corporation and the versions present in this guide have been modified to add additional automation. You can easily use the Microsoft versions, rather then these altered versions, by visiting the Microsoft site and downloading them. Here is the [link](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/).
 
 ## Getting Started
 1. Install the Windows ADK on your Technician PC. If you do not already have the latest Windows ADK installed (including the Windows PE add-on), you can download it from Microsoft at this link: https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install 
