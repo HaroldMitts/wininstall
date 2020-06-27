@@ -240,7 +240,7 @@ MD E:\Images\x64
 * Walkthrough-Deploy.bat
 * Wininstall.cmd
 
-> ***Note***: All of these scripts are available from Microsoft, except the wininstall.cmd from this [Microsft download link](https://download.microsoft.com/download/5/8/4/5844EE21-4EF5-45B7-8D36-31619017B76A/USB-B.zip)
+> ***Note***: All of these scripts are available from Microsoft, except the wininstall.cmd, from this [Microsft download link](https://download.microsoft.com/download/5/8/4/5844EE21-4EF5-45B7-8D36-31619017B76A/USB-B.zip)
 
 4. Copy a Windows 10 image to the Images folder, for example to the E:\Images\x64 folder
 
