@@ -30,27 +30,23 @@ IF %Windv% EQU 3 GOTO CLI
 IF %Windv% EQU 4 GOTO Help
 GOTO Selection
 
-REM =========================================================================================================
 :Win10Home
 @ECHO Ready to load Windows 10 Home
 PAUSE
 %usbbroot%:\Scripts\Walkthrough-Deploy.bat %usbbroot%:\images\x64\home.wim
 GOTO EOF
 
-REM =========================================================================================================
 :Win10Pro
 @ECHO Ready to load Windows 10 Pro
 PAUSE
 %usbbroot%:\Scripts\Walkthrough-Deploy.bat %usbbroot%:\images\x64\pro.wim
 GOTO EOF
 
-REM =========================================================================================================
 :CLI
 @ECHO Opening Command Shell in a new window
 Start /Min cmd.exe
 GOTO EOF
 
-REM =========================================================================================================
 :Help
 @ECHO *************************************** Help Section *************************************
 @ECHO This script will format the hard drive and install Windows.
@@ -60,6 +56,5 @@ REM ============================================================================
 @ECHO.
 GOTO Selection
 
-REM =========================================================================================================
 :EOF
 @ECHO Done.
