@@ -212,9 +212,9 @@ makewinpemedia /iso c:\WinPE\amd64 d:\amd64.iso
 - To create a bootable USB
 
 ````
-makewinpemedia /ufd c:\WinPE\amd64 p:
+makewinpemedia /ufd c:\WinPE\amd64 E:
 ````
-> ***Warning!*** Running this command will erase all content on the USB devices P partition.
+> ***Warning!*** Running this command will erase all content on the USB devices E partition.
 
 ## Next Steps - Deployment Resources
 1. Create a Scripts folder on the 2nd partition and name it Scripts
