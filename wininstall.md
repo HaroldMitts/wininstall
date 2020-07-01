@@ -86,11 +86,11 @@ Add a Call to the wininstall.cmd script - We will save winistall.cmd to the 2nd 
 winpeinit
 @ECHO OFF
 FOR %%i IN (C D E F G H I J K L N M O P Q R S T U V W X Y Z) DO (
-    IF EXIST %%i:\scripts\wininstall2.cmd (
+    IF EXIST %%i:\scripts\wininstall.cmd (
         SET usbbroot=%%i
     )
 )
-call %%i:\Scripts\wininstall2.cmd
+call %%i:\Scripts\wininstall.cmd
 ````
 * The first command initializes WinPE and should already exist in the Startnet.cmd.
 
@@ -203,7 +203,7 @@ MD E:\Images\x86
 MD E:\Images\x64
 ````
 
-3. Copy the Wininstall2.cmd files to the Scripts folder, for example to the E:\Scripts folder
+3. Copy the wininstall.cmd files to the Scripts folder, for example to the E:\Scripts folder
 
 4. Copy a Windows 10 image to the Images folder, for example to the E:\Images\x64 folder
 
