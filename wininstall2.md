@@ -64,7 +64,7 @@ dism /image:"c:\mount\winpe" /add-package /packagepath:"c:\Program Files (x86)\W
 ````
 dism /image:"c:\mount\winpe" /add-package /packagepath:"c:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-WMI_en-us.cab"
 ````
-````
+
 DotNet Framework and its English language component
 ````
 dism /image:"c:\mount\winpe" /add-package /packagepath:"c:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-NetFx.cab"
