@@ -23,8 +23,6 @@ The USB device will be created using the Windows ADK (Assessment and Deployment 
 
 > See [this page](https://github.com/HaroldMitts/wininstall/blob/master/TechnicianPC-lab.md "Build a Technician PC and Lab Environment") for more details about Technician PC requirements 
 
-> ***Note***: Walkthrough-deploy.bat, ApplyImage.bat, CreatePartitions.txt, and HideRecoveryPartitons.txt files are created by Microsoft Corporation and the versions present in this guide have been modified to add additional automation. You can easily use the Microsoft versions, rather then these altered versions, by visiting the Microsoft site and downloading them. Here is the [link](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/).
-
 ## Getting Started
 1. Install the Windows ADK on your Technician PC. If you do not already have the latest Windows ADK installed (including the Windows PE add-on), you can download it from Microsoft at this link: https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install 
 2. Create a new Windows PE (WinPE) using the Windows ADK. The following command will create a 64-bit custom WinPE located at c:\WinPE\amd64 and the WinPE will be named amd64
@@ -55,50 +53,25 @@ dism /mount-image /imagefile:"c:\WinPE\amd64\media\sources\boot.wim" /index:1 /m
 
 > In this example, the following OCs are added;
 >
->    * Scripting
 >    * WMI
 >    * .Net Framework
->    * HTA
->    * PowerShell
->    * DISM Commandlets
 
-Scripting OC and its English language component
-````
-dism /image:"c:\mount\winpe" /add-package /packagepath:"c:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-Scripting_en-us.cab"
-
-dism /image:"c:\mount\winpe" /add-package /packagepath:"c:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-Scripting_en-us.cab"
-````
 WMI OC and its English language component
+
 ````
 dism /image:"c:\mount\winpe" /add-package /packagepath:"c:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-WMI.cab"
-
+````
+````
 dism /image:"c:\mount\winpe" /add-package /packagepath:"c:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-WMI_en-us.cab"
 ````
+
 DotNet Framework and its English language component
 ````
 dism /image:"c:\mount\winpe" /add-package /packagepath:"c:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-NetFx.cab"
-
+````
+````
 dism /image:"c:\mount\winpe" /add-package /packagepath:"c:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-NetFx_en-us.cab"
 ````
-HTML Application (HTA) support and its English language component
-````
-dism /image:"c:\Mount\WinPE" /add-package /packagepath:"c:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-HTA.cab"
-
-dism /image:"c:\Mount\WinPE" /add-package /packagepath:"c:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-HTA_en-us.cab"
-````
-PowerShell and its English language component
-````
-dism /image:"c:\Mount\WinPE" /add-package /packagepath:"c:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-PowerShell.cab"
-
-dism /image:"c:\Mount\WinPE" /add-package /packagepath:"c:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-PowerShell_en-us.cab"
-````
-DISM Commandlets and its English language component
-````
-dism /image:"c:\Mount\WinPE" /add-package /packagepath:"c:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-DismCmdlets.cab"
-
-dism /image:"c:\Mount\WinPE" /add-package /packagepath:"c:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-DismCmdlets_en-us.cab"
-````
-
 ### Modify the Startnet.cmd of the WinPE
 
 Open the Startnet.cmd file using Notepad
@@ -113,11 +86,11 @@ Add a Call to the wininstall.cmd script - We will save winistall.cmd to the 2nd 
 winpeinit
 @ECHO OFF
 FOR %%i IN (C D E F G H I J K L N M O P Q R S T U V W X Y Z) DO (
-    IF EXIST %%i:\scripts\wininstall.cmd (
+    IF EXIST %%i:\scripts\wininstall2.cmd (
         SET usbbroot=%%i
     )
 )
-call %%i:\Scripts\wininstall.cmd
+call %%i:\Scripts\wininstall2.cmd
 ````
 * The first command initializes WinPE and should already exist in the Startnet.cmd.
 
@@ -230,21 +203,9 @@ MD E:\Images\x86
 MD E:\Images\x64
 ````
 
-3. Copy the following files to the Scripts folder, for example to the E:\Scripts folder
-
-* ApplyImage.bat
-* CreatePartitions-BIOS.txt
-* CreatePartitions-UEFI.txt
-* HideRecoveryPartitions-BIOS.txt
-* HideRecoveryPartitions-UEFI.txt
-* Walkthrough-Deploy.bat
-* Wininstall.cmd
-
-> ***Note***: All of these scripts are available from Microsoft, except the wininstall.cmd, from this [Microsft download link](https://download.microsoft.com/download/5/8/4/5844EE21-4EF5-45B7-8D36-31619017B76A/USB-B.zip)
+3. Copy the Wininstall2.cmd files to the Scripts folder, for example to the E:\Scripts folder
 
 4. Copy a Windows 10 image to the Images folder, for example to the E:\Images\x64 folder
-
-> ***Note***: wininstall.cmd is coded to look for files named pro.wim and home.wim. If you wish to name them something else, you will need to modify wininstall.cmd appropriately.
 
 ## Next Steps - Perform an Installation of Windows 10
 ![Install Windows 10 using USB](https://github.com/HaroldMitts/wininstall/blob/master/img/USB-Boot.png)
@@ -278,9 +239,6 @@ MD E:\Images\x64
 # Additional Related Resources
 Desktop manufacturing
 https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/
-
-USB-B direct download
-https://download.microsoft.com/download/5/8/4/5844EE21-4EF5-45B7-8D36-31619017B76A/USB-B.zip
 
 Windows 10 DISM Command-Line Options
 https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options 
