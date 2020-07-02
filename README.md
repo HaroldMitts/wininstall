@@ -151,8 +151,8 @@ Diskpart
 List Disk
 Select Disk [disk number]
 Clean
-Create Partition Primary Size=2000 Label="WinPE"
-Format Quick fs=fat32 
+Create Partition Primary Size=2000 
+Format Quick fs=fat32 Label="WinPE"
 Assign Letter=E
 Active
 Create Partition Primary
