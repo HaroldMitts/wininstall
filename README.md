@@ -163,6 +163,8 @@ Exit
 ````
 > ***Important***: in the 3rd command, enter the disk **number** for the USB device, in place of the [disk number] command placeholder. For example, if Diskpart tells you the USB device is Disk 3, enter `Select Disk 3` for the 3rd command. If you do not know the disk number, Diskpart can tell you by running `list disk` and noting the disk number.
 
+> ***Note***: If running the Diskpart commands manually, rather than from a script, Windows will prompt you to format the partition by a dialog once you create the partition. You can close the dialog since you are performing the commands manually using Diskpart. This is just plug and play detecting the new partition and is expected.
+
 ![Disk Manager view of USB](https://github.com/HaroldMitts/wininstall/blob/master/img/USB-diskMgmt.png)
 
 Example view of Disk Management showing the completed USB partitions
