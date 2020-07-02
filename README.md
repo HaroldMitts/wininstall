@@ -153,12 +153,10 @@ Select [disk number]
 Clean
 Create Partition Primary Size=2000
 Format Quick fs=fat32 
-Label="Windows PE"
 Assign Letter=E
 Active
 Create Partition Primary
 Format fs=ntfs Quick 
-Label="USB-B"
 Assign Letter=F
 List Volume
 Exit
