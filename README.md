@@ -149,7 +149,7 @@ Exit
 ````
 Diskpart
 List Disk
-Select [disk number]
+Select Disk [disk number]
 Clean
 Create Partition Primary Size=2000 Label="WinPE"
 Format Quick fs=fat32 
@@ -161,7 +161,7 @@ Assign Letter=F
 List Volume
 Exit
 ````
-> ***Important***: in the 3rd command, enter the disk number for the USB device, in place of the [disk number] command placeholder. If you do not know the disk number, Diskpart can tell you by running `list disk` and noting the disk number.
+> ***Important***: in the 3rd command, enter the disk **number** for the USB device, in place of the [disk number] command placeholder. For example, if Diskpart tells you the USB device is Disk 3, enter `Select Disk 3` for the 3rd command. If you do not know the disk number, Diskpart can tell you by running `list disk` and noting the disk number.
 
 ![Disk Manager view of USB](https://github.com/HaroldMitts/wininstall/blob/master/img/USB-diskMgmt.png)
 
