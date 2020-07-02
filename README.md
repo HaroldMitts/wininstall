@@ -151,12 +151,12 @@ Diskpart
 List Disk
 Select [disk number]
 Clean
-Create Partition Primary Size=2000
+Create Partition Primary Size=2000 Label="WinPE"
 Format Quick fs=fat32 
 Assign Letter=E
 Active
 Create Partition Primary
-Format fs=ntfs Quick 
+Format fs=ntfs Quick Label="USB-B"
 Assign Letter=F
 List Volume
 Exit
