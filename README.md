@@ -151,8 +151,7 @@ Diskpart
 List Disk
 Select [disk number]
 Clean
-Create Partition Primary 
-Size=2000
+Create Partition Primary Size=2000
 Format Quick fs=fat32 
 Label="Windows PE"
 Assign Letter=E
