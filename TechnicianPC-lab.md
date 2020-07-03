@@ -26,7 +26,7 @@
 * USB flash drives
     * USB-A 
         * FAT32
-        * 4GB minimum
+        * 2GB minimum
     * USB-B
         * NTFS
         * 16 GB minimum for x86
