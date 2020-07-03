@@ -102,6 +102,8 @@ call %%i:\Scripts\wininstall.cmd
 
 > ***Important***: When you save the file, you should close all open file handles, for example, close File Explorer or navigate out of the Mount folder or the WinPE folder. Failing to close any open file handles will cause errors when unmounting the WinPE.
 
+> ***Important***: Sometimes drive letters will vary, depending on the configuration of the device. Sometimes the drive will be detected as E and other times it can be F or another letter. 
+
 ## Next Steps - Review WinPE details using DISM commands
 
 > Optional: You can verify if WinPE has been successfully modified by running the following commands and examining the output
@@ -161,7 +163,7 @@ Assign Letter=F
 List Volume
 Exit
 ````
-> ***Important***: in the 3rd command, enter the disk **number** for the USB device, in place of the [disk number] command placeholder. For example, if Diskpart tells you the USB device is Disk 3, enter `Select Disk 3` for the 3rd command. If you do not know the disk number, Diskpart can tell you by running `list disk` and noting the disk number.
+> ***Important***: in the 3rd command, enter the disk **number** for the USB device, in place of the `[disk number]` command placeholder. For example, if Diskpart tells you the USB device is Disk 3, enter `Select Disk 3` for the 3rd command. If you do not know the disk number, Diskpart can tell you by running `list disk` and noting the disk number.
 
 > ***Note***: If running the Diskpart commands manually, rather than from a script, Windows will prompt you to format the partition by a dialog once you create the partition. You can close the dialog since you are performing the commands manually using Diskpart. This is just plug and play detecting the new partition and is expected.
 
@@ -188,23 +190,25 @@ makewinpemedia /ufd c:\WinPE\amd64 E:
 ````
 > ***Warning!*** Running this command will erase all content on the USB devices E partition.
 
+> ***Reminder***: On your system, the USB drive may not be drive E. Ensure that you are providing the correct drive letter where you want to install WinPE onto the USB. You can easily see this using the Disk Management tool. 
+
 ## Next Steps - Deployment Resources
 1. Create a Scripts folder on the 2nd partition and name it Scripts
 
 ````
-MD E:\Scripts
+MD F:\Scripts
 ````
 
 2. Create an Images folder on the 2nd partition and name it Images. You may want to create a folder for both 32-bit and 64-bit
 
 ````
-MD E:\Images\x86
-MD E:\Images\x64
+MD F:\Images\x86
+MD F:\Images\x64
 ````
 
-3. Copy the Wininstall.cmd files to the Scripts folder, for example to the E:\Scripts folder
+3. Copy the Wininstall.cmd files to the Scripts folder, for example to the F:\Scripts folder
 
-4. Copy a Windows 10 image to the Images folder, for example to the E:\Images\x64 folder
+4. Copy a Windows 10 image to the Images folder, for example to the F:\Images\x64 folder
 
 ## Next Steps - Perform an Installation of Windows 10
 ![Install Windows 10 using USB](https://github.com/HaroldMitts/wininstall/blob/master/img/USB-Boot.png)
