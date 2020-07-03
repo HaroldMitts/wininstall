@@ -83,7 +83,7 @@ notepad c:\Mount\WinPE\Windows\System32\startnet.cmd
 Add a Call to the wininstall.cmd script - We will save winistall.cmd to the 2nd partition or a network path as discussed later in this guide.
 
 ````
-winpeinit
+wpeinit
 @ECHO OFF
 FOR %%i IN (C D E F G H I J K L N M O P Q R S T U V W X Y Z) DO (
     IF EXIST %%i:\scripts\wininstall.cmd (
