@@ -26,11 +26,10 @@
 * USB flash drives
     * USB-A 
         * FAT32
-        * 2GB minimum
+        * 2 GB minimum
     * USB-B
         * NTFS
-        * 16 GB minimum for x86
-        * 32 GB minimum for amd64
+        * 16 GB minimum
     * USB hard drive (Optional)
         * 2 partitions
         * 2 GB FAT32 for WinPE
