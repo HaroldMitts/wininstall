@@ -84,13 +84,14 @@ Add a Call to the wininstall.cmd script - We will save winistall.cmd to the 2nd 
 
 ````
 wpeinit
+
 @ECHO OFF
+
 FOR %%i IN (C D E F G H I J K L N M O P Q R S T U V W X Y Z) DO (
     IF EXIST %%i:\scripts\wininstall.cmd (
-        SET usbbroot=%%i
+	CALL %%i:\Scripts\wininstall.cmd
     )
 )
-call %%i:\Scripts\wininstall.cmd
 ````
 * The first command initializes WinPE and should already exist in the Startnet.cmd.
 
