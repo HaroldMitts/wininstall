@@ -51,10 +51,10 @@ dism /mount-image /imagefile:"c:\WinPE\amd64\media\sources\boot.wim" /index:1 /m
 
 ### Extend the capabilities of the WinPE by adding WinPE Optional Components (OCs) using DISM
 
-> In this example, the following OCs are added;
->
->    * WMI
->    * .Net Framework
+In this example, the following OCs are added;
+
+* WMI
+* .Net Framework
 
 WMI OC and its English language component
 
@@ -72,6 +72,7 @@ dism /image:"c:\mount\winpe" /add-package /packagepath:"c:\Program Files (x86)\W
 ````
 dism /image:"c:\mount\winpe" /add-package /packagepath:"c:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-NetFx_en-us.cab"
 ````
+
 ### Modify the Startnet.cmd of the WinPE
 
 Open the Startnet.cmd file using Notepad
@@ -93,7 +94,8 @@ FOR %%i IN (C D E F G H I J K L N M O P Q R S T U V W X Y Z) DO (
     )
 )
 ````
-* The first command initializes WinPE and should already exist in the Startnet.cmd.
+
+* The first command initializes WinPE and should already exist in the Startnet.cmd, meaning you should not need to add it.
 
 * The second command turns off the verbose echoing of every command. This is optional, but makes usage cleaner.
 
@@ -102,8 +104,7 @@ FOR %%i IN (C D E F G H I J K L N M O P Q R S T U V W X Y Z) DO (
 * The fourth command invokes the wininstall.cmd script from the drive letter discovered by the loop.
 
 > ***Important***: When you save the file, you should close all open file handles, for example, close File Explorer or navigate out of the Mount folder or the WinPE folder. Failing to close any open file handles will cause errors when unmounting the WinPE.
-
-> ***Important***: Sometimes drive letters will vary, depending on the configuration of the device. Sometimes the drive will be detected as E and other times it can be F or another letter. 
+> ***Important***: Sometimes drive letters will vary, depending on the configuration of the device. Sometimes the drive will be detected as E and other times it can be F or another letter.
 
 ## Next Steps - Review WinPE details using DISM commands
 
