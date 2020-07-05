@@ -31,11 +31,7 @@ The USB device will be created using the Windows ADK (Assessment and Deployment 
 copype amd64 c:\WinPE\amd64
 ````
 
-In this guide, I use 64-bit, but all commands are similar for 32-bit, except you need to execute the 32-bit commands. For example, the preceeding command to create a 32-bit WinPE is
-
-````
-copype x86 c:\WinPE\x86
-````
+In this guide, I use 64-bit, but all commands are similar for 32-bit. Check [this Microsoft website](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/) for details if you need to create a 32-bit environment
 
 3. Create a folder for mounting images. It can be any location you like, but typically I place my Mount folder in the root of the C drive
 
