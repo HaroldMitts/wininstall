@@ -14,9 +14,10 @@ The USB device will be created using the Windows ADK (Assessment and Deployment 
 > ***Important***: FAT32 file system has a maximum file size of 4GB. Most Windows images are larger than 4GB and WinPE must reside on a FAT32 partition. Therefore, you will not be able to store Windows images in the WinPE partition and must store them in a separate NTFS partition, or on a network share and this is the reason we will create two partitions. Some types of USB keys will not support multiple partitions, if you encounter this issue, you will need to try a different device (external USB hard drives will always support multiple partitions).
 
 ## Requirements
+
 * A USB device of 16GB or greater
 * A technician PC with the Windows ADK installed and at least 32GB free disk space
-* Sample scripts from this repository
+* Wininstall script from this repository
 * A Reference PC (or virtual machine)
 * A Target PC (or virtual machine)
 * A Windows 10 image in .wim format 
@@ -24,6 +25,7 @@ The USB device will be created using the Windows ADK (Assessment and Deployment 
 > See [this page](https://github.com/HaroldMitts/wininstall/blob/master/TechnicianPC-lab.md "Build a Technician PC and Lab Environment") for more details about Technician PC requirements 
 
 ## Getting Started
+
 1. Install the Windows ADK on your Technician PC. If you do not already have the latest Windows ADK installed (including the Windows PE add-on), you can download it from Microsoft at this link: https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install 
 2. Create a new Windows PE (WinPE) using the Windows ADK. The following command will create a 64-bit custom WinPE located at c:\WinPE\amd64 and the WinPE will be named amd64
 
