@@ -11,7 +11,7 @@ The USB device will be created using the Windows ADK (Assessment and Deployment 
 * FAT32 WinPE bootable partition
 * NTFS partition for the Windows 10 image and other resources, such as scripts
 
-> ***Important***: FAT32 file system has a maximum file size of 4GB. Most Windows images are larger than 4GB and WinPE must reside on a FAT32 partition. Therefore, you will not be able to store Windows images in the WinPE partition and must store them in a separate NTFS partition, or on a network share and this is the reason we will create two partitions. Some types of USB keys will not support multiple partitions, if you encounter this issue, you will need to try a different device (external USB hard drives will always support multiple partitions).
+> ![Important](https://github.com/HaroldMitts/wininstall/blob/master/img/baseline_priority_high_black_18dp.png) ***Important***: FAT32 file system has a maximum file size of 4GB. Most Windows images are larger than 4GB and WinPE must reside on a FAT32 partition. Therefore, you will not be able to store Windows images in the WinPE partition and must store them in a separate NTFS partition, or on a network share and this is the reason we will create two partitions. Some types of USB keys will not support multiple partitions, if you encounter this issue, you will need to try a different device (external USB hard drives will always support multiple partitions).
 
 ## Requirements
 
@@ -99,7 +99,7 @@ FOR %%i IN (C D E F G H I J K L N M O P Q R S T U V W X Y Z) DO (
 
 * The third command is a loop to check which drive letter is assigned to the location where the ininstall.cmd script is saved and if found, runs the wininstall.cmd script.
 
-> ***Important***: When you save the file, you should close all open file handles, for example, close File Explorer or navigate out of the Mount folder or the WinPE folder. Failing to close any open file handles will cause errors when unmounting the WinPE.
+> ![Important](https://github.com/HaroldMitts/wininstall/blob/master/img/baseline_priority_high_black_18dp.png) ***Important***: When you save the file, you should close all open file handles, for example, close File Explorer or navigate out of the Mount folder or the WinPE folder. Failing to close any open file handles will cause errors when unmounting the WinPE.
 
 
 ## Next Steps - Review WinPE details using DISM commands
@@ -161,7 +161,7 @@ Assign Letter=F
 List Volume
 Exit
 ````
-> ***Important***: in the 3rd command, enter the disk **number** for the USB device, in place of the `[disk number]` command placeholder. For example, if Diskpart tells you the USB device is Disk 3, enter `Select Disk 3` for the 3rd command. If you do not know the disk number, Diskpart can tell you by running `list disk` and noting the disk number.
+> ![Important](https://github.com/HaroldMitts/wininstall/blob/master/img/baseline_priority_high_black_18dp.png) ***Important***: in the 3rd command, enter the disk **number** for the USB device, in place of the `[disk number]` command placeholder. For example, if Diskpart tells you the USB device is Disk 3, enter `Select Disk 3` for the 3rd command. If you do not know the disk number, Diskpart can tell you by running `list disk` and noting the disk number.
 
 ***Note***: If running the Diskpart commands manually, rather than from a script, Windows will prompt you to format the partition by a dialog once you create the partition. You can close the dialog since you are performing the commands manually using Diskpart. This is just plug and play detecting the new partition and is expected.
 
@@ -188,7 +188,7 @@ makewinpemedia /iso c:\WinPE\amd64 d:\amd64.iso
 ````
 makewinpemedia /ufd c:\WinPE\amd64 E:
 ````
-> ***Warning!*** Running this command will erase all content on the USB devices E partition.
+> ![Warning](https://github.com/HaroldMitts/wininstall/blob/master/img/baseline_warning_black_18dp.png) ***Warning!*** Running this command will erase all content on the USB devices E partition.
 
 > ***Reminder***: On your system, the USB drive may not be drive E. Ensure that you are providing the correct drive letter where you want to install WinPE onto the USB. You can easily see this using the Disk Management tool. 
 
@@ -231,7 +231,7 @@ MD F:\Images\x64
 
 8. Type `devmgmt.msc` to launch Device Manager. Inpect the device drivers and update drivers if needed, then close Device Manager.
 
-> ***Important***: Do not create a user account - that is for the end-user to do. If you do, you will need to run Sysprep to prepare the installation for the end-user again.
+> ![Important](https://github.com/HaroldMitts/wininstall/blob/master/img/baseline_priority_high_black_18dp.png) ***Important***: Do not create a user account - that is for the end-user to do. If you do, you will need to run Sysprep to prepare the installation for the end-user again.
 
 9. Power down the PC by holding the power button for 10 seconds or type `shutdown -s -t 0` at the command line
 
