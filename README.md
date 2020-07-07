@@ -101,7 +101,6 @@ FOR %%i IN (C D E F G H I J K L N M O P Q R S T U V W X Y Z) DO (
 
 > ***Important***: When you save the file, you should close all open file handles, for example, close File Explorer or navigate out of the Mount folder or the WinPE folder. Failing to close any open file handles will cause errors when unmounting the WinPE.
 
-***Note***: Sometimes drive letters will vary, depending on the configuration of the device. Sometimes the drive will be detected as E and other times it can be F or another letter.
 
 ## Next Steps - Review WinPE details using DISM commands
 
@@ -145,7 +144,7 @@ Exit
 
 3. Create the FAT32 WinPE partition and NTFS data partition on the USB using Diskpart
 
-> ***Warning!*** Running these commands will erase all content on the USB device.
+> ![Warning](https://github.com/HaroldMitts/wininstall/blob/master/img/baseline_priority_high_black_18dp.png) ***Warning!*** Running these commands will erase all content on the USB device.
 
 ````
 Diskpart
@@ -164,7 +163,9 @@ Exit
 ````
 > ***Important***: in the 3rd command, enter the disk **number** for the USB device, in place of the `[disk number]` command placeholder. For example, if Diskpart tells you the USB device is Disk 3, enter `Select Disk 3` for the 3rd command. If you do not know the disk number, Diskpart can tell you by running `list disk` and noting the disk number.
 
-> ***Note***: If running the Diskpart commands manually, rather than from a script, Windows will prompt you to format the partition by a dialog once you create the partition. You can close the dialog since you are performing the commands manually using Diskpart. This is just plug and play detecting the new partition and is expected.
+***Note***: If running the Diskpart commands manually, rather than from a script, Windows will prompt you to format the partition by a dialog once you create the partition. You can close the dialog since you are performing the commands manually using Diskpart. This is just plug and play detecting the new partition and is expected.
+
+***Note***: Sometimes drive letters will vary, depending on the configuration of the device. Sometimes the drive will be detected as E and other times it can be F or another letter.
 
 ![Disk Manager view of USB](https://github.com/HaroldMitts/wininstall/blob/master/img/USB-diskMgmt.png)
 
