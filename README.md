@@ -144,7 +144,7 @@ Exit
 
 3. Create the FAT32 WinPE partition and NTFS data partition on the USB using Diskpart
 
-> ![Warning](https://github.com/HaroldMitts/wininstall/blob/master/img/baseline_priority_high_black_18dp.png) ***Warning!*** Running these commands will erase all content on the USB device.
+> ![Warning](https://github.com/HaroldMitts/wininstall/blob/master/img/baseline_warning_black_18dp.png) ***Warning!*** Running these commands will erase all content on the USB device.
 
 ````
 Diskpart
