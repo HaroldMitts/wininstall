@@ -225,7 +225,7 @@ MD F:\Images\x64
 
 6. On next boot, the device will boot to the Windows Out of Box Experience (OOBE)
 
-> ***Note***: You should boot the device to OOBE in the factory so that you can perform a final qualitiy check and so that when the end-user next boots, the device will not need to go through plug and play detect again and it will boot faster. 
+***Note***: You should boot the device to OOBE in the factory so that you can perform a final qualitiy check and so that when the end-user next boots, the device will not need to go through plug and play detect again and it will boot faster. 
 
 7. From the first OOBE screen, press `Shift + F10` keys to open the command prompt
 
