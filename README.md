@@ -190,7 +190,7 @@ makewinpemedia /ufd c:\WinPE\amd64 E:
 ````
 > ![Warning](https://github.com/HaroldMitts/wininstall/blob/master/img/baseline_warning_black_18dp.png) ***Warning!*** Running this command will erase all content on the USB devices E partition.
 
-> ***Reminder***: On your system, the USB drive may not be drive E. Ensure that you are providing the correct drive letter where you want to install WinPE onto the USB. You can easily see this using the Disk Management tool. 
+***Reminder***: On your system, the USB drive may not be drive E. Ensure that you are providing the correct drive letter where you want to install WinPE onto the USB. You can easily see this using the Disk Management tool. 
 
 ## Next Steps - Deployment Resources
 1. Create a Scripts folder on the 2nd partition and name it Scripts
