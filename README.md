@@ -100,7 +100,8 @@ FOR %%i IN (C D E F G H I J K L N M O P Q R S T U V W X Y Z) DO (
 * The third command is a loop to check which drive letter is assigned to the location where the ininstall.cmd script is saved and if found, runs the wininstall.cmd script.
 
 > ***Important***: When you save the file, you should close all open file handles, for example, close File Explorer or navigate out of the Mount folder or the WinPE folder. Failing to close any open file handles will cause errors when unmounting the WinPE.
-> ***Important***: Sometimes drive letters will vary, depending on the configuration of the device. Sometimes the drive will be detected as E and other times it can be F or another letter.
+
+***Note***: Sometimes drive letters will vary, depending on the configuration of the device. Sometimes the drive will be detected as E and other times it can be F or another letter.
 
 ## Next Steps - Review WinPE details using DISM commands
 
