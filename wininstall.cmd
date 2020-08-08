@@ -33,6 +33,7 @@ IF %Windv% EQU 4 GOTO Help
 @ECHO.
 
 :SetFirmware 
+wpeutil updatebootinfo
 for /f "tokens=2* delims=	 " %%A in ('reg query HKLM\System\CurrentControlSet\Control /v PEFirmwareType') DO SET Firmware=%%B
 if %Firmware%==0x1 (
     echo Detected firmware mode: BIOS.
