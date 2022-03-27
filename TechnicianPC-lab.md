@@ -18,7 +18,7 @@
 * Virtual PC
 
 ## Target PC
-* Compatible with Windows 10
+* Compatible with Windows 10 or above
 * Laptop, Desktop, or Tablet
 
 ## Additional Hardware
