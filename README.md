@@ -1,4 +1,6 @@
 # wininstall
+**Status: No longer maintained** — This project is no longer actively maintained and is provided as-is, with no updates, compatibility fixes, or support. Its instructions and scripts target legacy Windows 10 deployment workflows and may not work with current Windows versions or ADK releases. Verify against current Microsoft documentation before use, especially in production.
+
 Command Script for installing Windows 10 from a single USB device
 
 ## Overview
